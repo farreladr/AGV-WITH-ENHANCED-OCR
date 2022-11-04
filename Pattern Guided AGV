@@ -1,0 +1,144 @@
+import RPi.GPIO as GPIO import time
+from time import sleep GPIO.setmode(GPIO.BCM) GPIO.setwarnings(False)
+Ena,In1,In2 = 22,17,27
+
+#=============================================#
+#	mulai dari titik P #=============================================#
+def Pola_A(): GPIO.setup(25,GPIO.OUT) pwm=GPIO.PWM(25, 360)
+pwm.start(0) pwm.ChangeDutyCycle(42) sleep(1)
+pwm.stop(1) GPIO.setup(Ena,GPIO.OUT) GPIO.setup(In1,GPIO.OUT) GPIO.setup(In2,GPIO.OUT) pwm = GPIO.PWM(Ena,25)
+pwm.start(0) GPIO.output(In1,GPIO.LOW) GPIO.output(In2,GPIO.HIGH)
+pwm.ChangeDutyCycle(100) sleep (1.6)
+pwm.stop(1)
+
+print("BERADA DI TITIK A")
+print("")
+print("") ############################################
+def Pola_B(): GPIO.setup(25,GPIO.OUT) pwm=GPIO.PWM(25, 360)
+pwm.start(0) pwm.ChangeDutyCycle(42) sleep(1)
+pwm.stop(1) GPIO.setup(Ena,GPIO.OUT) GPIO.setup(In1,GPIO.OUT) GPIO.setup(In2,GPIO.OUT) pwm = GPIO.PWM(Ena,25)
+pwm.start(0) GPIO.output(In1,GPIO.LOW) GPIO.output(In2,GPIO.HIGH)
+pwm.ChangeDutyCycle(100) sleep (0.8)
+pwm.stop(1) GPIO.setup(25,GPIO.OUT) pwm=GPIO.PWM(25, 360)
+ 
+
+
+
+pwm.start(0) pwm.ChangeDutyCycle(53) sleep(1)
+pwm.stop(1) GPIO.setup(Ena,GPIO.OUT) GPIO.setup(In1,GPIO.OUT) GPIO.setup(In2,GPIO.OUT) pwm = GPIO.PWM(Ena,25)
+pwm.start(0) GPIO.output(In1,GPIO.LOW) GPIO.output(In2,GPIO.HIGH)
+pwm.ChangeDutyCycle(100) sleep (2.3)
+pwm.stop(1)
+print("BERADA DI TITIK B")
+print("")
+print("")
+
+############################################
+def Pola_C(): GPIO.setup(25,GPIO.OUT) pwm=GPIO.PWM(25, 360)
+pwm.start(0) pwm.ChangeDutyCycle(31) sleep(1)
+pwm.stop(1) GPIO.setup(Ena,GPIO.OUT) GPIO.setup(In1,GPIO.OUT) GPIO.setup(In2,GPIO.OUT) pwm = GPIO.PWM(Ena,25)
+pwm.start(0) GPIO.output(In1,GPIO.LOW) GPIO.output(In2,GPIO.HIGH)
+pwm.ChangeDutyCycle(100) sleep (1.5)
+pwm.stop(1) GPIO.setup(25,GPIO.OUT) pwm=GPIO.PWM(25, 360)
+pwm.start(0) pwm.ChangeDutyCycle(53) sleep(1)
+pwm.stop(1) GPIO.setup(Ena,GPIO.OUT) GPIO.setup(In1,GPIO.OUT) GPIO.setup(In2,GPIO.OUT) pwm = GPIO.PWM(Ena,25)
+pwm.start(0) GPIO.output(In1,GPIO.LOW) GPIO.output(In2,GPIO.HIGH)
+pwm.ChangeDutyCycle(100) sleep (1.5)
+pwm.stop(1)
+print("BERADA DI TITIK C")
+print("")
+print("")
+ 
+
+
+
+############################################
+def Pola_D(): GPIO.setup(25,GPIO.OUT) pwm=GPIO.PWM(25, 360)
+pwm.start(0) pwm.ChangeDutyCycle(42) sleep(1)
+pwm.stop(1) GPIO.setup(Ena,GPIO.OUT) GPIO.setup(In1,GPIO.OUT) GPIO.setup(In2,GPIO.OUT) pwm = GPIO.PWM(Ena,25)
+pwm.start(0) GPIO.output(In1,GPIO.LOW) GPIO.output(In2,GPIO.HIGH)
+pwm.ChangeDutyCycle(100) sleep (1)
+pwm.stop(1) GPIO.setup(25,GPIO.OUT) pwm=GPIO.PWM(25, 360)
+pwm.start(0) pwm.ChangeDutyCycle(31) sleep(1)
+pwm.stop(1) GPIO.setup(Ena,GPIO.OUT) GPIO.setup(In1,GPIO.OUT) GPIO.setup(In2,GPIO.OUT) pwm = GPIO.PWM(Ena,25)
+pwm.start(0) GPIO.output(In1,GPIO.LOW) GPIO.output(In2,GPIO.HIGH)
+pwm.ChangeDutyCycle(100) sleep (1.2)
+pwm.stop(1)
+print("BERADA DI TITIK D")
+print("")
+print("")
+
+def Pola_E(): GPIO.setup(25,GPIO.OUT) pwm=GPIO.PWM(25, 360)
+pwm.start(0) pwm.ChangeDutyCycle(31) sleep(1)
+pwm.stop(1) GPIO.setup(Ena,GPIO.OUT) GPIO.setup(In1,GPIO.OUT) GPIO.setup(In2,GPIO.OUT) pwm = GPIO.PWM(Ena,25)
+pwm.start(0) GPIO.output(In1,GPIO.LOW) GPIO.output(In2,GPIO.HIGH)
+pwm.ChangeDutyCycle(100) sleep (1.2)
+pwm.stop(1)
+ 
+
+
+
+GPIO.setup(25,GPIO.OUT) pwm=GPIO.PWM(25, 360)
+pwm.start(0) pwm.ChangeDutyCycle(53) sleep(1)
+pwm.stop(1) GPIO.setup(Ena,GPIO.OUT) GPIO.setup(In1,GPIO.OUT) GPIO.setup(In2,GPIO.OUT) pwm = GPIO.PWM(Ena,25)
+pwm.start(0) GPIO.output(In1,GPIO.LOW) GPIO.output(In2,GPIO.HIGH)
+pwm.ChangeDutyCycle(100) sleep (1.2)
+pwm.stop(1)
+print("BERADA DI TITIK E")
+print("")
+print("")
+
+
+def Pola_F(): GPIO.setup(25,GPIO.OUT) pwm=GPIO.PWM(25, 360)
+pwm.start(0) pwm.ChangeDutyCycle(42) sleep(1)
+pwm.stop(1) GPIO.setup(Ena,GPIO.OUT) GPIO.setup(In1,GPIO.OUT) GPIO.setup(In2,GPIO.OUT) pwm = GPIO.PWM(Ena,25)
+pwm.start(0) GPIO.output(In1,GPIO.LOW) GPIO.output(In2,GPIO.HIGH)
+pwm.ChangeDutyCycle(100) sleep (0.8)
+pwm.stop(1) GPIO.setup(25,GPIO.OUT) pwm=GPIO.PWM(25, 360)
+pwm.start(0) pwm.ChangeDutyCycle(48) sleep(1)
+pwm.stop(1) GPIO.setup(Ena,GPIO.OUT) GPIO.setup(In1,GPIO.OUT) GPIO.setup(In2,GPIO.OUT) pwm = GPIO.PWM(Ena,25)
+pwm.start(0) GPIO.output(In1,GPIO.LOW) GPIO.output(In2,GPIO.HIGH)
+pwm.ChangeDutyCycle(100) sleep (0.9)
+pwm.stop(1)
+print("BERADA DI TITIK F")
+ 
+
+
+
+print("")
+print("")
+
+def Pola_G(): GPIO.setup(25,GPIO.OUT) pwm=GPIO.PWM(25, 360)
+pwm.start(0) pwm.ChangeDutyCycle(42) sleep(1)
+pwm.stop(1) GPIO.setup(Ena,GPIO.OUT) GPIO.setup(In1,GPIO.OUT) GPIO.setup(In2,GPIO.OUT) pwm = GPIO.PWM(Ena,25)
+pwm.start(0) GPIO.output(In1,GPIO.LOW) GPIO.output(In2,GPIO.HIGH)
+pwm.ChangeDutyCycle(100) sleep (1.3)
+pwm.stop(1) GPIO.setup(25,GPIO.OUT) pwm=GPIO.PWM(25, 360)
+pwm.start(0) pwm.ChangeDutyCycle(53) sleep(1)
+pwm.stop(1) GPIO.setup(Ena,GPIO.OUT) GPIO.setup(In1,GPIO.OUT) GPIO.setup(In2,GPIO.OUT) pwm = GPIO.PWM(Ena,25)
+pwm.start(0) GPIO.output(In1,GPIO.LOW) GPIO.output(In2,GPIO.HIGH)
+pwm.ChangeDutyCycle(100) sleep (1.9)
+pwm.stop(1)
+print("BERADA DI TITIK G")
+print("")
+print("")
+
+def Pola_P(): GPIO.setup(25,GPIO.OUT) pwm=GPIO.PWM(25, 360)
+pwm.start(0) pwm.ChangeDutyCycle(42) sleep(1)
+pwm.stop(1) GPIO.setup(Ena,GPIO.OUT) GPIO.setup(In1,GPIO.OUT) GPIO.setup(In2,GPIO.OUT) pwm = GPIO.PWM(Ena,25)
+pwm.start(0) GPIO.output(In1,GPIO.LOW) GPIO.output(In2,GPIO.HIGH)
+pwm.ChangeDutyCycle(100)
+ 
+
+
+
+sleep (1) pwm.stop(1)
+GPIO.setup(25,GPIO.OUT) pwm=GPIO.PWM(25, 360)
+pwm.start(0) pwm.ChangeDutyCycle(31) sleep(1)
+pwm.stop(1) GPIO.setup(Ena,GPIO.OUT) GPIO.setup(In1,GPIO.OUT) GPIO.setup(In2,GPIO.OUT) pwm = GPIO.PWM(Ena,25)
+pwm.start(0) GPIO.output(In1,GPIO.LOW) GPIO.output(In2,GPIO.HIGH)
+pwm.ChangeDutyCycle(100) sleep (1.2)
+pwm.stop(1)
+print("BERADA DI TITIK P")
+print("")
+print("")

@@ -1,0 +1,167 @@
+import cv2
+import pytesseract
+from pytesseract import Output from PB import *
+
+cap = cv2.VideoCapture(0) cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+
+while True:
+# Capture frame-by-frame ret, frame = cap.read()
+
+d = pytesseract.image_to_data(frame, output_type=Output.DICT) n_boxes = len(d['text'])
+for i in range(n_boxes): if int(d['conf'][i]) > 60:
+(text, x, y, w, h) = (d['text'][i], d['left'][i], d['top'][i], d['width'][i], d['height'][i]) # don't show empty text
+if text and text.strip() != "":
+frame = cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+frame = cv2.putText(frame, text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 0, 255), 3)
+#print('capture pola!Hasil',text ) key=cv2.waitKey(1)
+#key = cv2.waitKey(0) if key == ord('q'):
+print("Capture pola!Hasil=",text )
+
+if text == 'titikA': # Deteksi Pola A time.sleep(1)
+#print("AGV parkir di pola", text) print("")
+time.sleep(1)
+tujuan = input ("Pergi ke mana ? ") print("")
+
+if tujuan == "A": # Tujuan A Pola_A()
+if tujuan == "B": # Tujuan B Pola_B()
+if tujuan == "C": # Tujuan C Pola_C()
+if tujuan == "D": # Tujuan D Pola_D()
+if tujuan == "E": # Tujuan E Pola_E()
+if tujuan == "A2": # Tujuan A Pola_A2()
+if tujuan == "F": # Tujuan F
+ 
+
+
+
+
+Pola_F()
+if tujuan == "G": # Tujuan G Pola_G()
+if tujuan == "H": # Tujuan H Pola_H()
+if tujuan == "P": # Tujuan P Pola_P()
+
+
+if text == 'titikB': # Deteksi Pola B time.sleep(1)
+#print("AGV parkir di pola", text) print("")
+time.sleep(1)
+tujuan = input ("Pergi ke mana ? ") print("")
+if tujuan == "A": # Tujuan A Pola_A()
+if tujuan == "B": # Tujuan B Pola_B()
+if tujuan == "C": # Tujuan C Pola_C()
+if tujuan == "D": # Tujuan D Pola_D()
+if tujuan == "E": # Tujuan E Pola_E()
+if tujuan == "A2": # Tujuan A Pola_A2()
+if tujuan == "F": # Tujuan F Pola_F()
+if tujuan == "G": # Tujuan G Pola_G()
+if tujuan == "H": # Tujuan H Pola_H()
+if tujuan == "P": # Tujuan P Pola_P()
+
+if text == 'titikC': # Deteksi Pola C time.sleep(1)
+#print("AGV parkir di pola", text) print("")
+time.sleep(1)
+tujuan = input ("Pergi ke mana ? ") print("")
+if tujuan == "A": # Tujuan A Pola_A()
+if tujuan == "B": # Tujuan B Pola_B()
+if tujuan == "C": # Tujuan C Pola_C()
+if tujuan == "D": # Tujuan D Pola_D()
+if tujuan == "E": # Tujuan E Pola_E()
+ 
+
+
+
+
+if tujuan == "A2": # Tujuan A Pola_A2()
+if tujuan == "F": # Tujuan F Pola_F()
+if tujuan == "G": # Tujuan G Pola_G()
+if tujuan == "H": # Tujuan H Pola_H()
+if tujuan == "P": # Tujuan P Pola_P()
+
+if text == 'titikD': # Deteksi Pola D time.sleep(1)
+#print("AGV parkir di pola", text) print("")
+time.sleep(1)
+tujuan = input ("Pergi ke mana ? ") print("")
+if tujuan == "A": # Tujuan A Pola_A()
+if tujuan == "B": # Tujuan B Pola_B()
+if tujuan == "C": # Tujuan C Pola_C()
+if tujuan == "D": # Tujuan D Pola_D()
+if tujuan == "E": # Tujuan E Pola_E()
+if tujuan == "A2": # Tujuan A Pola_A2()
+if tujuan == "F": # Tujuan F Pola_F()
+if tujuan == "G": # Tujuan G Pola_G()
+if tujuan == "H": # Tujuan H Pola_H()
+if tujuan == "P": # Tujuan P Pola_P()
+
+if text == 'titikE': # Deteksi Pola E time.sleep(1)
+#print("AGV parkir di pola", text) print("")
+time.sleep(1)
+tujuan = input ("Pergi ke mana ? ") print("")
+if tujuan == "A": # Tujuan A Pola_A()
+if tujuan == "B": # Tujuan B Pola_B()
+if tujuan == "C": # Tujuan C Pola_C()
+if tujuan == "D": # Tujuan D Pola_D()
+ 
+
+
+
+
+if tujuan == "E": # Tujuan E Pola_E()
+if tujuan == "A2": # Tujuan A Pola_A2()
+if tujuan == "F": # Tujuan F Pola_F()
+if tujuan == "G": # Tujuan G Pola_G()
+if tujuan == "H": # Tujuan H Pola_H()
+if tujuan == "P": # Tujuan P Pola_P()
+
+if text == 'titikF': # Deteksi Pola F time.sleep(1)
+#print("AGV parkir di pola", text) print("")
+time.sleep(1)
+tujuan = input ("Pergi ke mana ? ") print("")
+if tujuan == "A": # Tujuan A Pola_A()
+if tujuan == "B": # Tujuan B Pola_B()
+if tujuan == "C": # Tujuan C Pola_C()
+if tujuan == "D": # Tujuan D Pola_D()
+if tujuan == "E": # Tujuan E Pola_E()
+if tujuan == "A2": # Tujuan A Pola_A2()
+if tujuan == "F": # Tujuan F Pola_F()
+if tujuan == "G": # Tujuan G Pola_G()
+if tujuan == "H": # Tujuan H Pola_H()
+if tujuan == "P": # Tujuan P Pola_P()
+
+if text == 'titikG': # Deteksi Pola G time.sleep(1)
+#print("AGV parkir di pola", text) print("")
+time.sleep(1)
+tujuan = input ("Pergi ke mana ? ") print("")
+if tujuan == "A": # Tujuan A Pola_A()
+if tujuan == "B": # Tujuan B Pola_B()
+if tujuan == "C": # Tujuan C Pola_C()
+ 
+
+
+
+
+if tujuan == "D": # Tujuan D Pola_D()
+if tujuan == "E": # Tujuan E Pola_E()
+if tujuan == "A2": # Tujuan A Pola_A2()
+if tujuan == "F": # Tujuan F Pola_F()
+if tujuan == "G": # Tujuan G Pola_G()
+if tujuan == "H": # Tujuan H Pola_H()
+if tujuan == "P": # Tujuan P Pola_P()
+
+if text == 'titikP': # Deteksi Pola P time.sleep(1)
+#print("AGV parkir di pola", text) print("")
+time.sleep(1)
+tujuan = input ("Pergi ke mana ? ") print("")
+if tujuan == "A": # Tujuan A Pola_A()
+if tujuan == "B": # Tujuan B Pola_B()
+if tujuan == "C": # Tujuan C Pola_C()
+if tujuan == "D": # Tujuan D Pola_D()
+if tujuan == "E": # Tujuan E Pola_E()
+if tujuan == "A2": # Tujuan A Pola_A2()
+if tujuan == "F": # Tujuan F Pola_F()
+if tujuan == "G": # Tujuan G Pola_G()
+if tujuan == "H": # Tujuan H Pola_H()
+if tujuan == "P": # Tujuan P Pola_P()
+
+# Display the resulting frame cv2.imshow('frame', frame) cv2.waitKey(1)
+#key = cv2.waitKey(0) #key=cv2.waitKey(1) #key = cv2.waitKey(0) #if key == ord('q'):
+# print("Capture pola!Hasil=",text )
+# When everything done, release the capture cap.release()
+cv2.destroyAllWindows()
